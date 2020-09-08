@@ -56,7 +56,7 @@ Here, you will need to place your `src` directory inside the `c` directory.
 
 In addition to creating the container, the run command above creates a mount between the host machine and the container for a shared folder space. This way, any files placed inside the host mount directory can be easily accessible inside the container mount directory and vice versa.
 
-After your `docker run ...` command successfully runs, you can verify the correctness of the container creation by using the following command:
+After your "docker run ..." command successfully runs, you can verify the correctness of the container creation by using the following command:
 `docker container ls`
 A container with its ID number should be listed in the produced output.
 
@@ -94,19 +94,23 @@ to make sure the program is working.
 
 `cd /tools/jbe/bin`
 
+To get to "tools/jbe/bin" directory, you may need to go to the home directory by running `cd` and then go one directory up by using the `cd ..` command.
+
 `java ee.ioc.cs.jbe.browser.BrowserApplication`
 
-![Java Bytecode Editor](vlc1.png)
+![Java Bytecode Editor](vnc1.png)
 
 5. Use the "File/Open" button to open `Print.class` (not `Print.java`!), then using the menu on the left expand "Methods/main/Code".
 
-![Expanded Java Bytecode Editor](vlc2.png)
+![Expanded Java Bytecode Editor](vnc2.png)
 
 6. Click on the "Code Editor" button and locate the line that says `iconst_5`. Change it to `iconst_m1` and then click the "Save Method" button. Don't worry if you get a warning in the terminal window about JDK 1.5, just ignore it.
 
-7. In your terminal window, run the program again. DON’T recompile it! You should see a different result for i. Congratulations! You have just edited some Java bytecode!
+7. In your terminal window, run the program again. DON'T recompile it! You should see a different result for i. Congratulations! You have just edited some Java bytecode!
 
-8. You will notice that different constant initial values compile into different JVM commands. For instance, all values from -1 through 5 have one-word bytecode commands ("iconst m1" through "iconst 5"), while values between 6 and 127 translate into "bipush" commands. Another change occurs between 32767 and 32768. Use the jbe code editor so that the bytecode will set variable i to -2, variable j to 5000, variable k to 65000, variable l to 3. Don’t change the Java program, only change the bytecode! Run your program to see if it works.
+8. You will notice that different constant initial values compile into different JVM commands. For instance, all values from -1 through 5 have one-word bytecode commands ("iconst_m1" through "iconst_5"), while values between 6 and 127 translate into "bipush" commands. Another change occurs between 32767 and 32768.
+
+Next, try to use the jbe code editor so that the bytecode will set variable num1 to -2, variable num2 to 5000, variable num3 to 65000, variable num4 to 3. Don’t change the Java program, only change the bytecode! Run your program to see if it works.
 
 ### Submission
 
