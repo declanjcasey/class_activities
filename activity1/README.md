@@ -9,16 +9,18 @@ This class activity invites individuals to examine the output of the Java compil
 
 Download and install VNC Viewer.
 
-- [Mac VNC Viewer](https:/www.realvnc.com/en/connect/download/viewer/macos/)
-- [Windows VNC Viewer](https:/www.realvnc.com/en/connect/download/viewer/windows/)
-- [Ubuntu VNC Viewer](https:/www.realvnc.com/en/connect/download/viewer/linux/)
+- [Mac VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/macos/)
+- [Windows VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/windows/)
+- [Ubuntu VNC Viewer](https://www.realvnc.com/en/connect/download/viewer/linux/)
 
 ### Loading Docker Container
 
 The following steps assume that you have Docker Desktop installed. If your set up has
 been done correctly, you should be able to get started and validate the Docker
 version and run the hello world docker container using the following commands:
+
 `docker –version`
+
 `docker run hello-world`
 
 1. Navigate to the `activity1` directory inside your "class_activities" repository.
@@ -56,24 +58,18 @@ Here, you will need to place your `src` directory inside the `c` directory.
 
 In addition to creating the container, the run command above creates a mount between the host machine and the container for a shared folder space. This way, any files placed inside the host mount directory can be easily accessible inside the container mount directory and vice versa.
 
-After your "docker run ..." command successfully runs, you can verify the correctness of the container creation by using the following command:
+6. After your "docker run ..." command successfully runs, you can verify the correctness of the container creation by using the following command:
+
 `docker container ls`
+
 A container with its ID number should be listed in the produced output.
 
-6. In order to connect to a running container, we will use the VNC viewer. The steps below
+7. In order to connect to a running container, we will use the VNC viewer. The steps below
 assume that you have downloaded and installed VNC viewer.
 
 - Open the VNC viewer and create a new connection.
 - In the Server section, type in the following if you are a MAC or Linux user:
 `localhost:5900`
-
-If you are a windows user, type the following command in the Docker quick terminal:
-`docker-machine ip`
-
-Copy the IP address displayed as part of the output from the above command.
-Next go to the VNC viewer and type down in the URL path:
-`IPADDRESS:5900`
-Note: Here you need to replace the `IPADDRESS` with your own ip address from the docker command.
 
 - Now you should be taken to a prompt to provide a password. Enter the password `1234`.
 After providing the password, you should be directed to the container console.
@@ -85,16 +81,15 @@ in your class activities repository. Add appropriate Javadoc comments and remote
 
 2. In the VNC Viewer, inside the white terminal screen, type the following command:
 
-cd /usr/share/src
+`cd /usr/share/src`
 
 3. Compile and execute the `Print.java` program (`javac Print.java`, `java Print`)
 to make sure the program is working.
 
-4. Open Java Byte Editor using the following commands
-
-`cd /tools/jbe/bin`
-
+4. Open Java Byte Editor by first navigating to the `/tools/jbe/bin` directory.
 To get to "tools/jbe/bin" directory, you may need to go to the home directory by running `cd` and then go one directory up by using the `cd ..` command.
+
+Then, run the following program:
 
 `java ee.ioc.cs.jbe.browser.BrowserApplication`
 
