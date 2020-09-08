@@ -24,19 +24,27 @@ version and run the hello world docker container using the following commands:
 1. Navigate to the `activity1` directory inside your "class_activities" repository.
 
 2. Provide the executable privilege to the `entrypoint.sh` file by running the following command:
+
 `chmod +x entrypoint.sh`
 
 3. Build the docker image using the following command:
+
 `docker build -t jbe .`
+
  Note: in this command, jbe is the user provided container name, which could be any name but in this
  activity we will use "jbe" for consistency. Additionally, you need to be inside the `activity1` directory in order to run the build command.
 
 4. Upon successful build, you can verify the correctness of image creation by running the following command:
+
 `docker image ls`
+
 The image named "jbe" should be listed as one of the images in the output.
 
 5. Run docker container based on the image created in the previous steps using the following command:
-`docker run -t -d -P -v /Users/janyljumadinova/Documents/repos/2020-2021/cs201/class_activities/activity1/myimages/src:/usr/share/src --rm -ti -p 5900:5900 --name jbe01 jbe`
+
+```
+docker run -t -d -P -v /Users/janyljumadinova/Documents/repos/2020-2021/cs201/class_activities/activity1/src:/usr/share/src --rm -ti -p 5900:5900 --name jbe01 jbe
+```
 
 Note: In the command above, replace the directory path "/Users/janyljumadinova/Documents/repos/2020-2021/cs201/class_activities/activity1/myimages/src" with the path of the directory to your class activities repository in YOUR machine.
 
@@ -82,8 +90,10 @@ cd /usr/share/src
 3. Compile and execute the `Print.java` program (`javac Print.java`, `java Print`)
 to make sure the program is working.
 
-4. Open Java Byte Editor using the following commands:
-`cd cd /tools/jbe/bin`
+4. Open Java Byte Editor using the following commands
+
+`cd /tools/jbe/bin`
+
 `java ee.ioc.cs.jbe.browser.BrowserApplication`
 
 ![Java Bytecode Editor](vlc1.png)
