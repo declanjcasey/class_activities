@@ -1,4 +1,4 @@
-# CMPSC 101 Participation
+# CMPSC 101: Class Activity 1
 
 ## Introduction
 
