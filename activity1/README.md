@@ -82,22 +82,22 @@ cd /usr/share/src
 3. Compile and execute the `Print.java` program (`javac Print.java`, `java Print`)
 to make sure the program is working.
 
-4. Open Java Byte Editor
+4. Open Java Byte Editor using the following commands:
 `cd cd /tools/jbe/bin`
 `java ee.ioc.cs.jbe.browser.BrowserApplication`
 
-Use the "File/Open" button to open `Print.class` (not `Print.java`!), then from the menu on the left expand "Methods/main/Code".
+![Java Bytecode Editor](vlc1.png)
 
+5. Use the "File/Open" button to open `Print.class` (not `Print.java`!), then using the menu on the left expand "Methods/main/Code".
 
+![Expanded Java Bytecode Editor](vlc2.png)
 
-## Commands
+6. Click on the "Code Editor" button and locate the line that says `iconst_5`. Change it to `iconst_m1` and then click the "Save Method" button. Don't worry if you get a warning in the terminal window about JDK 1.5, just ignore it.
 
-chmod +x entrypoint.sh
+7. In your terminal window, run the program again. DON’T recompile it! You should see a different result for i. Congratulations! You have just edited some Java bytecode!
 
-docker build -t jbe  .
+8. You will notice that different constant initial values compile into different JVM commands. For instance, all values from -1 through 5 have one-word bytecode commands ("iconst m1" through "iconst 5"), while values between 6 and 127 translate into "bipush" commands. Another change occurs between 32767 and 32768. Use the jbe code editor so that the bytecode will set variable i to -2, variable j to 5000, variable k to 65000, variable l to 3. Don’t change the Java program, only change the bytecode! Run your program to see if it works.
 
-docker image ls  
+### Submission
 
-docker run -t -d -P -v /Users/janyljumadinova/Documents/repos/2020-2021/cs201/class_activities/activity1/myimages/_data:/usr/share/_data --rm -ti -p 5900:5900 --name jbe01 jbe
-
-docker container ls
+Commit the Print.java (with modified comments) and the modified Print.class files to your class activities repository. Be sure that the .class file reflects the changes you made to the Java bytecode in the previous step. Be sure you have not changed the code in the .java file (apart from the header comments).
