@@ -28,7 +28,7 @@ Of course, it is not possible to explain JavaScript in any reasonable amount of 
 
 ## An Online JavaScript Test Environment
 
-Go to the site [JSFiddle](http://jsfiddle.net). Click on the JavaScript link on the bottom left window and make sure that the menus say "No-Library (pure JS)" and "onLoad". In your Browser menu, open the "JavaScript console" (it may be under "Tools/Developer Tools" or "View/Developer" or some other menu/submenu heading; it may simply be named "Console" or "Browser Console"). For example, in Firefox you can click on "Tools/Web Developer/Browser Console".
+Go to the site [JSFiddle](http://jsfiddle.net). Click on the JavaScript link on the bottom left window and make sure that the menus say "No-Library (pure JS)" and "onLoad". Optionally, in your Browser menu, open the "JavaScript console" (it may be under "Tools/Developer Tools" or "View/Developer" or some other menu/submenu heading; it may simply be named "Console" or "Browser Console"). For example, in Firefox you can click on "Tools/Web Developer/Browser Console".
 
 For you class activity 4 you are invited to complete specific steps outlined in the `activity4.md` file and answer questions specified after each step of the activity.
 

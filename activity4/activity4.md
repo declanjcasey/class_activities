@@ -2,7 +2,7 @@
 
 ## Tasks
 
-If you haven't done so already, go to the site [JSFiddle](http://jsfiddle.net). Click on the JavaScript link on the bottom left window and make sure that the menus say "No-Library (pure JS)". In your Browser menu, open the "JavaScript console" (it may be under "Tools/Developer Tools" or "View/Developer" or some other menu/submenu heading; it may simply be named "Console" or "Web Console"). For example, in Firefox you can click on "Tools/Web Developer/Web Console".
+If you haven't done so already, go to the site [JSFiddle](http://jsfiddle.net). Click on the JavaScript link on the bottom left window and make sure that the menus say "No-Library (pure JS)". Optionally, in your Browser menu, open the "JavaScript console" (it may be under "Tools/Developer Tools" or "View/Developer" or some other menu/submenu heading; it may simply be named "Console" or "Web Console"). For example, in Firefox you can click on "Tools/Web Developer/Web Console".
 
 ### Step 1
 
