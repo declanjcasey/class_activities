@@ -2,11 +2,11 @@
 
 ## Tasks
 
-If you haven't done so already, go to the site [JSFiddle](http://jsfiddle.net). Click on the JavaScript link on the bottom left window and make sure that the menus say "No-Library (pure JS)" and "onLoad". In your Browser menu, open the "JavaScript console" (it may be under "Tools/Developer Tools" or "View/Developer" or some other menu/submenu heading; it may simply be named "Console" or "Browser Console"). For example, in Firefox you can click on "Tools/Web Developer/Browser Console".
+If you haven't done so already, go to the site [JSFiddle](http://jsfiddle.net). Click on the JavaScript link on the bottom left window and make sure that the menus say "No-Library (pure JS)". In your Browser menu, open the "JavaScript console" (it may be under "Tools/Developer Tools" or "View/Developer" or some other menu/submenu heading; it may simply be named "Console" or "Web Console"). For example, in Firefox you can click on "Tools/Web Developer/Web Console".
 
 ### Step 1
 
-On the jsfiddle page, in the Window labeled "JavaScript", type the following short program, then click the "Run" button at the top of the screen:
+On the jsfiddle page, in the Window labeled "JavaScript", type/copy the following short program, then click the "Run" button at the top of the screen:
 
 ```
 var glob = 'one'; // global variable
@@ -26,7 +26,7 @@ console.log("After calling test, glob = "+glob);
 console.log("  unknown = "+unknown);
 ```
 
-Now try uncommenting each of the commented-out calls (one by one) to `console.log` to see what happens. You should see errors.
+Now try uncommenting each of the commented-out calls (one by one) to `console.log` to see what happens. You should see errors. Study the errors and try to understand their meaning.
 
 #### Step 1 Questions
 
@@ -36,7 +36,7 @@ Now try uncommenting each of the commented-out calls (one by one) to `console.lo
 
 ### Step 2
 
-There is a concept in programming languages called "hole in scope". Try this code:
+There is a concept in programming languages called "hole in scope". Try running this code:
 
 ```
 var glob = 'one';
@@ -73,7 +73,7 @@ test3();
 
 #### Step 3 Question
 
-What is the output?
+What is the output? Why?
 
 ### Step 4
 
@@ -107,15 +107,15 @@ function test5() {
     var x = 'hello';
   }
   console.log("x = " + x);
-  console.log("i="+i);
+  console.log("i = " + i);
 }
 test5();
-console.log("i="+i);
+console.log("i = " + i);
 ```
 
 #### Step 5 Question
 
-What is the output?
+What is the output? If there are any errors, explain why they are generated and modify the code to remove the error(s).
 
 ### Step 6
 
@@ -137,8 +137,8 @@ test6();
 
 #### Step 6 Question
 
-What is the output? Explain the differences between these types by providing concrete examples of what you observe from running code in steps 5 and 6.
+What is the output? Explain the differences between `var' and `let' types by providing concrete examples of what you observe from running code in steps 5 and 6.
 
 ### Submission
 
-Commit and push the modified `activity4.md` file to your class activities repository.
+Commit and push the `activity4.md` file with your answers to your class activities repository.

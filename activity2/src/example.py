@@ -1,17 +1,24 @@
-# http://cs.indstate.edu/~jkinne/cs420-s2019/code/?view=./sly-calc.py
+# Grammar Rules:
 # -----------------------------------------------------------------------------
-# calc1.py
-# 4 + 5
+# Statements: statements statement | statement
+# Statement : ID EQ expr | PRINT LPAREN expr RPAREN
+# Expr : expr PLUS expr | expr TIMES expr | NUM
+
 # -----------------------------------------------------------------------------
 
 from sly import Lexer, Parser
 
 class MyLexer(Lexer):
-    tokens = { ID, NUM, EQ }
+    tokens = { ID, NUM, EQ, PRINT, PLUS, TIMES, LPAREN, RPAREN }
     ignore = ' \t'
     ID = r'[a-zA-Z_][a-zA-Z0-9_]*'
     NUM = r'[0-9]+'
     EQ = r'='
+    ID['print'] = PRINT
+    PLUS = r'\+'
+    TIMES = r'\*'
+    LPAREN = r'\('
+    RPAREN = r'\)'
 
     def NUM(self, t):
         t.value = int(t.value)
@@ -23,7 +30,7 @@ class MyParser(Parser):
 
     @_('statements statement')
     def statements(self, p):
-        return p.statement + [ p.statement ]
+        return p.statements + [ p.statement ]
 
     @_('statement')
     def statements(self, p):
@@ -41,13 +48,27 @@ class MyParser(Parser):
     def expr(self, p):
         return ('id', p.ID)
 
+    @_('PRINT LPAREN expr RPAREN')
+    def statement(self, p):
+        return ('print', p.expr)
+
+    @_('expr PLUS expr',
+        'expr TIMES expr')
+    def expr(self, p):
+        return (p[1], p.expr0, p.expr1) # return the value, operator, expr on the right and left
+
+    precedence = (
+        ('left', 'PLUS'),
+        ('left', 'TIMES')
+    )
+
 if __name__ == '__main__':
     lexer = MyLexer()
-    for tok in lexer.tokenize('a = 3'):
-        print(tok)
-    #parser = MyParser()
-    #result = parser.parse(lexer.tokenize("a = 3"))
-    #print(result)
+    #for tok in lexer.tokenize('2 + 3 * 4'):
+    #    print(tok)
+    parser = MyParser()
+    result = parser.parse(lexer.tokenize("a = 2 a = 3"))
+    print(result)
 
 #    while True:
 #        try:
