@@ -83,8 +83,9 @@ test3();
 
 What is the output? Why?
 
+```
 x = hello
-
+```
 
 
 ### Step 4
@@ -108,8 +109,9 @@ We say that JavaScript has function scope rather than block scope.
 
 What is the output?
 
+```
 x = hello
-
+```
 
 ### Step 5
 
@@ -132,9 +134,11 @@ console.log("i = " + i);
 
 What is the output? If there are any errors, explain why they are generated and modify the code to remove the error(s).
 
+```
 x = hello
 i = 10 
 i is undefined
+```
 
 ### Step 6
 
@@ -157,12 +161,13 @@ test6();
 #### Step 6 Question
 
 What is the output? Explain the differences between `var' and `let' types by providing concrete examples of what you observe from running code in steps 5 and 6.
-
+```
 x = 10
 (uncommenting first console.log statement):
 i is undefined
 (uncommenting second console.log statement):
 i is undefined
+```
 
 ### Submission
 
