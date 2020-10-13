@@ -12,7 +12,19 @@ You can check that you have the `progator` image by running the following comman
 
 Then, run the docker container and mount your "activity5" directory as a volume by replacing `your-path/local/working/directory` in the following command with the path to your "activity5" directory:
 
+*Mac OS*: 
+
 `docker run -d -p 80:80 -v /your-path/local/working/directory/:/root/environment janyljumadinova/progator`
+
+*Linux OS*: 
+
+May need to use `sudo` as:
+
+`sudo docker run -d -p 80:80 -v /your-path/local/working/directory/:/root/environment janyljumadinova/progator`
+
+*Windows OS* (note the quotes in path):
+
+`docker run -d -p 80:80 -v "C:\Users\your-path/local/working/directory/":/root/environment janyljumadinova/progator`
 
 You can check that you have correctly started the Docker container:
 
