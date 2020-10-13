@@ -9,7 +9,7 @@ If you haven't done so already, go to the site [JSFiddle](http://jsfiddle.net). 
 On the jsfiddle page, in the Window labeled "JavaScript", type/copy the following short program, then click the "Run" button at the top of the screen:
 
 ```
-var glob = 'one'; // global variable
+var glob = 'one'; // global variable - declared outside the function
 
 function test() {
     glob = glob + "two";
@@ -32,11 +32,11 @@ Now try uncommenting each of the commented-out calls (one by one) to `console.lo
 
 1. Why is `unknown` defined after test is called but not before?
 
- It is not defined before test() because it was not previously declared/used in the program. It is defined after test() because it is declared within the function without the keyword "var," which makes it a global variable. 
+ It is not defined before `test()` because it was not previously declared/used in the program. It is defined after `test()` because it is declared within the function without the keyword `var`, which makes it a global variable irrespective of where it is declared. 
 
 2. Why is `loc` undefined both before and after test is called?
 
-loc is undefined before test() is called because it was not previously declared/used in the program. It is still undefined after test() because it is declared with the keyword "var," which limits the scope of the loc variable to only within the test() function.
+`loc` is undefined before `test()` is called because it was not previously declared/used in the program. It is still undefined after test() because it is declared with the keyword `var` inside the function, which limits the scope of the `loc` variable to only within the `test()` function.
 
 
 ### Step 2
@@ -63,7 +63,7 @@ console.log(glob);
 
 Is function `test2` within the scope of the first variable `glob`?
 
-No, test2() is not within the scope of the global variable 'glob'. This is again because the keyword 'var' is used to assign a value to 'glob,' constraining that assignment to only within the test2() function.
+No, `test2()` is not within the scope of the global variable `glob`. This is again because the keyword `var` is used to assign a value to `glob` inside function `test2` constraining that assignment to only within the `test2()` function.
 
 
 ### Step 3
@@ -160,7 +160,7 @@ test6();
 
 #### Step 6 Question
 
-What is the output? Explain the differences between `var' and `let' types by providing concrete examples of what you observe from running code in steps 5 and 6.
+What is the output? Explain the differences between `var` and `let` types by providing concrete examples of what you observe from running code in steps 5 and 6.
 ```
 x = 10
 (uncommenting first console.log statement):
