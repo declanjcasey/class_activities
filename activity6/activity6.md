@@ -58,7 +58,7 @@ In header comments, identify the programmers, and state the purpose of the progr
 
 (but please don’t type `-o myprog.c` because this will erase your C program!).
 
-- To execute it, type: ./myprog
+- To execute it, type: `./myprog`
 
 ## Submission
 
