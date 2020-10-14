@@ -6,14 +6,14 @@ If you never programmed in C, or you have but you have forgotten what it’s lik
 
 - Comments are of the form / ∗ ... ∗ /. (Some C compilers allow the “one-line comment” format //..., but some do not. Ours does.)
 
-- If you want to do any output (let’s forget input for today!), put this line at the top: #include <stdio.h>
+- If you want to do any output (let's forget input for today!), put this line at the top: #include <stdio.h>
 
-- Variables must be declared at the beginning (again, some C compilers allow you to insert declarations in the middle of a program, some don’t). In particular, you can’t write “for (int i = ...)”; you must declare i above the loop.
+- Variables must be declared at the beginning (again, some C compilers allow you to insert declarations in the middle of a program, some don’t). In particular, our compiler allows us to write "for (int i = ...)"; some C compilers require you to declare `i` above the loop.
 
-- To print an integer variable, say x, with an optional label in front, use: printf(‘‘Optional label %d\n",x);
+- To print an integer variable, say `x`, with an optional label in front, use: `printf(‘‘Optional label %d\n",x);`
 
 - To print a string, just use:
-printf(‘‘The string you want printed\n’’);
+`printf(‘"The string you want printed\n’");`
 
 - The general form of the program is: 
 ```
@@ -63,5 +63,5 @@ In header comments, identify the programmers, and state the purpose of the progr
 ## Submission
 
 Before our next class session, please submit `prog1.c` and `prog2.c` to your class_activities repository. Each person is to
-submit their  
+commit programs developed as a team to their own repository, however the programs within each team are expected to be identical.
       
