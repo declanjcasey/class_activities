@@ -44,7 +44,7 @@ int i = 10;
 
 ## C and `goto` Activity
 
-Working with a partner, write a C program (in `prog1.c`) using only int variables, `if` statements (but NOT else!), loops, `printf` statements, and (most importantly) `goto` statements. Then, rewrite your program (in `prog2.c`) without `goto` statements.
+Working with a partner, write a C program (in `prog1.c`) using only int variables, `if` statements (but NOT else!), loops, `printf` statements, and (most importantly) `goto` statements. Then, rewrite your program (in `prog2.c`) without `goto` statements. How many lines of code have you reduced by this conversion? *Submit this answer in the [Google Form](https://forms.gle/3C9NqFQBb573Gpex9).*
 
 Use the example above for the use of `goto` statements (also, in `example1.c`) and a sample program in `example2.c` for use of `if/else` statements and loops. 
 
@@ -62,6 +62,6 @@ In header comments, identify the programmers, and state the purpose of the progr
 
 ## Submission
 
-Before our next class session, please submit `prog1.c` and `prog2.c` to your class_activities repository. Each person is to
-commit programs developed as a team to their own repository, however the programs within each team are expected to be identical.
+Before our next class session, please submit `prog1.c` and `prog2.c` to your class_activities repository and answer question on the number of line reduction in the [Google Form](https://forms.gle/3C9NqFQBb573Gpex9). Each person is to
+commit programs developed as a team to their own repository, however the programs within each team are expected to be identical or similar.
       
