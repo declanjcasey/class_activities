@@ -42,7 +42,7 @@ May need to use `sudo` as:
 
 *Windows OS* (note the quotes in path):
 
-`docker run -d -p 80:80 -v "C:\Users\your-path/local/working/directory/":/root/environment janyljumadinova/progator`
+`docker run -d -p 80:80 -v "C:\Users\your-path/":/root/environment janyljumadinova/progator`
 
 You can check that you have correctly started the Docker container:
 
