@@ -16,9 +16,9 @@ public class Poly {
       Parent parent1 = new Parent();
       Parent parent2 = new Child();
 
-      // TODO: This will invoke method() of which class?
+      // Parent class
       parent1.method();
-      // TODO: This will invoke method() of which class?
+      // Child extended class
       parent2.method();
    }
 }
