@@ -14,7 +14,7 @@ Note any new features of the Go language that you learn about through tutorial e
 
 ## Running Go programs
 
- To compile and run Java program execute the following command:
+ To compile and run a Go program execute the following command:
 
 `go run Example.go`
 
