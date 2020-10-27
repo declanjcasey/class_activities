@@ -6,7 +6,7 @@ Please follow along with instructor's guided programming additions to `Example.g
 
 Then, explore the following tutorials at [Golang Tour](https://tour.golang.org) under "Basics" category:
 
-- Basics/Packages, variables, and functions
+- Packages, variables, and functions
 
 - Flow control statements 
 
