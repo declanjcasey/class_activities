@@ -5,7 +5,7 @@
 There are a number of programs in the `src` directory to facilitate the class discussion. Each program contains a comment
 header that contains commands for compiling and running these programs. 
 
-For the  activity to be submitted, please create a new Haskell function in `example.hs` file.
+For the class activity to be submitted, please go through [activity10 document](activity10.md) and create a new Haskell function in `example.hs` file.
 
 ## Using `progator` Docker image
 
