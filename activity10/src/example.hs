@@ -1,1 +1,2 @@
--- TODO: Add own Haskell function
+subtract :: Integer -> Integer -> Integer  
+subtract x y =  x + y                       
