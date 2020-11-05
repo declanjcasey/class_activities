@@ -11,6 +11,8 @@
 
 # Returns the sequence [1,2], [3,4], [5,6], [7,8] (four repetitions)
 # (See https://en.wikipedia.org/wiki/One,_Two,_Buckle_My_Shoe )
+# 
+# Run the program: python gen.py
 
 def call():
   nums = [1,2,3,4,5,6,7,8]
